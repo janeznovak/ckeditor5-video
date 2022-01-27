@@ -43,6 +43,7 @@ export function viewToModelStyleAttribute( styles ) {
         for ( const style of nonDefaultStyles[ modelVideoElement.name ] ) {
             if ( conversionApi.consumable.consume( viewElement, { classes: style.className } ) ) {
                 conversionApi.writer.setAttribute( 'videoStyle', style.name, modelVideoElement );
+                console.log("nekej3");
             }
         }
     };

@@ -95,12 +95,14 @@ export default class VideoUploadEditing extends Plugin {
 
             for ( const fetchableVideo of fetchableVideos ) {
                 writer.setAttribute( 'uploadProcessed', true, fetchableVideo.videoElement );
+                console.log("nekej4,5");
 
                 const loader = fileRepository.createLoader( fetchableVideo.promise );
 
                 if ( loader ) {
                     writer.setAttribute( 'src', '', fetchableVideo.videoElement );
                     writer.setAttribute( 'uploadId', loader.id, fetchableVideo.videoElement );
+                    console.log("nekej5");
                 }
             }
         } );
@@ -153,6 +155,7 @@ export default class VideoUploadEditing extends Plugin {
 
             this.editor.model.change( writer => {
                 writer.setAttribute( 'src', urls.default, videoElement );
+                console.log("nekej6");
             } );
         }, { priority: 'low' } );
     }
@@ -184,6 +187,7 @@ export default class VideoUploadEditing extends Plugin {
 
         model.enqueueChange( 'transparent', writer => {
             writer.setAttribute( 'uploadStatus', 'reading', videoUploadElements.get( loader.id ) );
+            console.log("nekej7");
         } );
 
         return loader.read()
@@ -218,6 +222,7 @@ export default class VideoUploadEditing extends Plugin {
 
                 model.enqueueChange( 'transparent', writer => {
                     writer.setAttribute( 'uploadStatus', 'uploading', videoElement );
+                    console.log("nekej8");
                 } );
 
                 return promise;
@@ -227,6 +232,7 @@ export default class VideoUploadEditing extends Plugin {
                     const videoElement = videoUploadElements.get( loader.id );
 
                     writer.setAttribute( 'uploadStatus', 'complete', videoElement );
+                    console.log("nekej9");
 
                     this.fire( 'uploadComplete', { data, videoElement } );
                 } );

@@ -110,7 +110,7 @@ export default class VideoInlineEditing extends Plugin {
                                 ...attribute,
                                 videoUtils.findViewVideoElement( blockViewVideo )
                             ) );
-
+                        console.log("nekej");
                         return blockViewVideo.getChild( 0 );
                     } else {
                         return blockViewVideo;

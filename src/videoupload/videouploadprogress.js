@@ -106,6 +106,7 @@ function _showPlaceholder( videoUtils, placeholder, viewFigure, writer ) {
 
     if ( viewVideo.getAttribute( 'src' ) !== placeholder ) {
         writer.setAttribute( 'src', placeholder, viewVideo );
+        console.log("nekej10");
     }
 
     if ( !_getUIElement( viewFigure, 'placeholder' ) ) {
@@ -184,5 +185,6 @@ function _displayLocalVideo( videoUtils, viewFigure, writer, loader ) {
         const viewVideo = videoUtils.findViewVideoElement( viewFigure );
 
         writer.setAttribute( 'src', loader.data, viewVideo );
+        console.log("nekej11");
     }
 }

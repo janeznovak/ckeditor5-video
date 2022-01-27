@@ -88,6 +88,7 @@ export default class VideoInsertUI extends Plugin {
                 editor.model.change( writer => {
                     writer.setAttribute( 'src', videoInsertView.videoURLInputValue, selectedElement );
                     writer.removeAttribute( 'sizes', selectedElement );
+                    console.log("nekej1");
                 } );
             } else {
                 editor.execute( 'insertVideo', { source: videoInsertView.videoURLInputValue } );
