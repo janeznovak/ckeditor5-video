@@ -43,7 +43,9 @@ export function downcastVideoAttribute( videoUtils, videoType, attributeKey ) {
 		const viewWriter = conversionApi.writer;
 		const element = conversionApi.mapper.toViewElement( data.item );
 		const video = videoUtils.findViewVideoElement( element );
+		console.log("in modules");
 
 		viewWriter.setAttribute( data.attributeKey, data.attributeNewValue || '', video );
+		viewWriter.setAttribute('controls', true, video);
 	}
 }
