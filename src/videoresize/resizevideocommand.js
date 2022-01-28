@@ -32,7 +32,6 @@ export default class ResizeVideoCommand extends Command {
 		if ( videoElement ) {
 			model.change( writer => {
 				writer.setAttribute( 'width', options.width, videoElement );
-				console.log("nekej2");
 			} );
 		}
 	}

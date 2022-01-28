@@ -55,7 +55,6 @@ export default class VideoStyleCommand extends Command {
                 writer.removeAttribute( 'videoStyle', videoElement );
             } else {
                 writer.setAttribute( 'videoStyle', requestedStyle, videoElement );
-                console.log("nekej4");
             }
         } );
     }

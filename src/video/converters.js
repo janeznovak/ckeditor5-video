@@ -43,10 +43,6 @@ export function downcastVideoAttribute( videoUtils, videoType, attributeKey ) {
 		const viewWriter = conversionApi.writer;
 		const element = conversionApi.mapper.toViewElement( data.item );
 		const video = videoUtils.findViewVideoElement( element );
-		console.log("in modules");
-		console.log("this is data.attributeKey", data.attributeKey);
-		console.log("this is data.attributeNewValue", data.attributeNewValue);
-		console.log("this is video", video);
 
 
 		viewWriter.setAttribute( data.attributeKey, data.attributeNewValue || '', video );
